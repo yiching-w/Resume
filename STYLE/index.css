@@ -11,23 +11,13 @@ BODY {
     right: 0;
     bottom: 0;
     text-align: center;
-    background: #263541;
     z-index: 999;
 }
 
-.preloader .spinner .lineBounce {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.coverBg {
+    display: flex;
+    flex-direction: row;
     height: 100%;
-}
-
-.preloader .spinner .lineBounce {
-    background: rgba(255, 255, 255, .5);
-    height: 0;
-    -webkit-animation: loading 1s infinite ease-in-out;
-    animation: loading 1s infinite ease-in-out;
 }
 
 .preloader .spinner {
@@ -36,6 +26,16 @@ BODY {
     top: 0;
     width: 1px;
     height: 100%;
+}
+
+.preloader .spinner .lineBounce {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, .5);
+    -webkit-animation: loading 1s infinite ease-in-out;
+    animation: loading 1s infinite ease-in-out;
 }
 
 @keyframes loading {
