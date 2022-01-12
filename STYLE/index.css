@@ -1,3 +1,65 @@
 BODY {
     background: #121315;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.banner {
+    background-image: url('https://yiching-w.github.io/resume/IMAGE/bg.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typingContainer {
+    font-size: 45px;
+    text-align: center;
+}
+
+#sentence {
+    color: #FFFFFF;
+}
+
+#featureText {
+    font-weight: bold;
+    color: #4bffa5;
+}
+
+.inputCursor {
+    display: inline-block;
+    width: 1px;
+    height: 40px;
+    background-color: white;
+    animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .typingContainer {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .typingContainer {
+        font-size: 30px;
+    }
 }
