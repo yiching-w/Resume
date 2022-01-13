@@ -1,4 +1,13 @@
-$(document).ready(function() {
+$(document).ready(function () {
+
+    loadingWait();
+    function loadingWait() {
+        setTimeout(() => {
+            $('#preloader').fadeOut();
+            $('BODY').css('overflow', 'auto');
+        }, 1300);
+    }
+
     const textList = ['Wang Yi Ching', 'Front-End Developer'];
 
     typing(textList, $('#featureText'));
@@ -38,8 +47,4 @@ $(document).ready(function() {
     async function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
-
-    window.addEventListener('scroll', function() {
-        console.log(document.getElementById('preloader').clientHeight);
-    });
 });

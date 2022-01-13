@@ -14,23 +14,17 @@ BODY {
     left: 0;
     right: 0;
     bottom: 0;
-    text-align: center;
-    z-index: 999;
+    z-index: 101;
+    background-color: #121315DD;
 }
 
-.preloader .spinner {
+.lineLoading {
     position: absolute;
-    left: 50%;
-    top: 0;
-    width: 1px;
-    height: 100%;
-}
-
-.preloader .spinner .lineBounce {
-    position: absolute;
-    top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    margin: auto;
+    width: 0.8px;
+    height: 100%;
     background: rgba(255, 255, 255, .5);
     -webkit-animation: loading 1s infinite ease-in-out;
     animation: loading 1s infinite ease-in-out;
@@ -132,7 +126,7 @@ BODY {
     font-size: 28px;
     bottom: 66px;
     animation: bounce 1s linear infinite alternate;
-    z-index: 9999;
+    z-index: 100;
 }
 
 @keyframes bounce {
