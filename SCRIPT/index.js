@@ -1,47 +1,45 @@
 $(document).ready(function() {
-    const carouselText = [
-        { text: "Wang Yi Ching" },
-        { text: "Front-End Developer" }
-    ]
+    const textList = ['Wang Yi Ching', 'Front-End Developer'];
 
-    $(document).ready(async function() {
-        dynamicTyping(carouselText, "#featureText")
-    });
+    typing(textList, $('#featureText'));
 
-    async function typeSentence(sentence, eleRef, delay = 100) {
-        const letters = sentence.split("");
+    async function typing(textList, eleRef) {
         let i = 0;
-        while (i < letters.length) {
-            await waitForMs(delay);
-            $(eleRef).append(letters[i]);
-            i++
+        while (true) {
+            await typeSentence(textList[i], eleRef);
+            await sleep(1500);
+            await deleteSentence(eleRef);
+            await sleep(500);
+            i++;
+            if (i >= textList.length) { i = 0 };
         }
+    }
+
+    async function typeSentence(text, eleRef) {
+        const letters = text.split('');
+        for (let letter of letters) {
+            await sleep(100);
+            eleRef.append(letter);
+        };
         return;
     }
 
     async function deleteSentence(eleRef) {
-        const sentence = $(eleRef).html();
-        const letters = sentence.split("");
-        while (letters.length > 0) {
-            await waitForMs(100);
-            letters.pop();
-            $(eleRef).html(letters.join(""));
+        let text = eleRef.html()
+        let textLength = text.length;
+        while (textLength > 0) {
+            await sleep(100);
+            text = text.slice(0, -1);
+            eleRef.html(text);
+            textLength -= 1;
         }
     }
 
-    async function dynamicTyping(carouselList, eleRef) {
-        var i = 0;
-        while (true) {
-            await typeSentence(carouselList[i].text, eleRef);
-            await waitForMs(1500);
-            await deleteSentence(eleRef);
-            await waitForMs(500);
-            i++
-            if (i >= carouselList.length) { i = 0; }
-        }
+    async function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    function waitForMs(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms))
-    }
+    window.addEventListener('scroll', function() {
+        console.log(document.getElementById('preloader').clientHeight);
+    });
 });

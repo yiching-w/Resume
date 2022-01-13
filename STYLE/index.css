@@ -1,3 +1,7 @@
+HTML {
+    scroll-behavior: smooth;
+}
+
 BODY {
     background: #121315;
     margin: 0;
@@ -12,12 +16,6 @@ BODY {
     bottom: 0;
     text-align: center;
     z-index: 999;
-}
-
-.coverBg {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
 }
 
 .preloader .spinner {
@@ -72,9 +70,11 @@ BODY {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .typingContainer {
@@ -124,4 +124,39 @@ BODY {
     .typingContainer {
         font-size: 30px;
     }
+}
+
+.slideDown {
+    color: #4bffa5;
+    position: absolute;
+    font-size: 28px;
+    bottom: 66px;
+    animation: bounce 1s linear infinite alternate;
+    z-index: 9999;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 68px;
+    }
+    50% {
+        bottom: 58px;
+    }
+    100% {
+        bottom: 68px;
+    }
+}
+
+.introSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 45px;
+    border: 1px solid rgba(255, 255, 255, .25);
+}
+
+.introSection IMG {
+    width: 100px;
+    height: 100px;
 }
