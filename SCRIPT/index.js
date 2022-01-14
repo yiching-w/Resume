@@ -50,10 +50,9 @@ $(document).ready(function() {
 
     window.addEventListener('scroll', () => {
         if ($(window).scrollTop() == '0') {
-            console.log('123')
             $('.bgImg').css('transform', 'translate(0px, 0px)')
         } else if ($(window).scrollTop() < $(window).height()) {
-            $('.bgImg').css('transform', 'translate(0px, -' + ($(window).scrollTop() - 50) + 'px)')
+            $('.bgImg').css('transform', 'translate(0px, -' + ($(window).scrollTop() - 150) + 'px)')
         }
     });
 });
