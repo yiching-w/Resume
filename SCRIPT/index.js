@@ -1,6 +1,6 @@
-$(document).ready(function () {
-
+$(document).ready(function() {
     loadingWait();
+
     function loadingWait() {
         setTimeout(() => {
             $('#preloader').fadeOut();
@@ -47,4 +47,13 @@ $(document).ready(function () {
     async function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
+
+    window.addEventListener('scroll', () => {
+        if ($(window).scrollTop() == '0') {
+            console.log('123')
+            $('.bgImg').css('transform', 'translate(0px, 0px)')
+        } else if ($(window).scrollTop() < $(window).height()) {
+            $('.bgImg').css('transform', 'translate(0px, -' + ($(window).scrollTop() - 50) + 'px)')
+        }
+    });
 });
