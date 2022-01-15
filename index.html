@@ -1,57 +1,86 @@
 <!DOCTYPE html>
-<HTML dir="ltr" lang="zh-Hant">
+<html dir="ltr" lang="zh-Hant">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="#101010" name="theme-color" />
+    <meta content="0" http-equiv="expires" />
+    <title>Yi Ching｜Resume</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      crossorigin="anonymous"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      rel="stylesheet"
+    />
+    <link href="STYLE/index.css" rel="stylesheet" />
+  </head>
 
-<HEAD>
-    <META content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <META charset="UTF-8" />
-    <META content="IE=edge" http-equiv="X-UA-Compatible" />
-    <META content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
-    <META content="#101010" name="theme-color" />
-    <META content="0" http-equiv="expires" />
-    <TITLE>Yi Ching｜Resume</TITLE>
-    <LINK href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet" />
-    <LINK crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" rel="stylesheet" />
-    <LINK href="STYLE/index.css" rel="stylesheet" />
-</HEAD>
-
-<BODY style="overflow: hidden;">
-    <DIV class="preloader" id="preloader">
-        <DIV class="lineLoading"></DIV>
-    </DIV>
-    <DIV class="banner" id="banner">
-        <IMG class="bgImg" src="https://yiching-w.github.io/resume/IMAGE/bg.jpg" />
-        <DIV class="typingContainer">
-            <SPAN class="sentence" id="sentence">Hello, I am</SPAN>
-            <DIV>
-                <SPAN id="featureText"></SPAN>
-            </DIV>
-        </DIV>
-        <A class="slideDown" href="#about">
-            <I class="fas fa-chevron-down"></I>
-        </A>
-    </DIV>
-    <DIV class="middleLine"></DIV>
-    <SECTION id="about">
-        <H2>About</H2>
-        <DIV class="about divWrap">
-            <DIV>
-                <IMG src="https://d35hi420xc5ji7.cloudfront.net/profileImage/819d7020-2665-4f4b-a88a-e1c56573c648" />
-            </DIV>
-            <DIV class="introduction">
-                <DIV class="name">你好，我叫王怡晴</DIV>
-            </DIV>
-        </DIV>
-    </SECTION>
-    <SECTION id="learn">
-        <H2>What I learn</H2>
-        <DIV class="divWrap"></DIV>
-    </SECTION>
-    <SECTION id="Works">
-        <H2>Works</H2>
-        <DIV class="divWrap"></DIV>
-    </SECTION>
-    <SCRIPT crossorigin="anonymous" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></SCRIPT>
-    <SCRIPT src="SCRIPT/index.js"></SCRIPT>
-</BODY>
-
-</HTML>
+  <body style="overflow: hidden">
+    <div class="preloader" id="preloader">
+      <div class="lineLoading"></div>
+    </div>
+    <div class="banner" id="banner">
+      <img
+        class="bgImg"
+        src="https://yiching-w.github.io/resume/IMAGE/bg.jpg"
+      />
+      <div class="typingContainer">
+        <span class="sentence" id="sentence">Hello, I am</span>
+        <div class="featureTextContainer">
+          <span id="featureText"></span>
+        </div>
+      </div>
+      <div class="btn">
+        <a href="#about">ABOUT</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#works">WORKS</a>
+      </div>
+      <div class="slideDownContainer">
+        <a class="slideDown" href="#about">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </div>
+    <div class="middleLine"></div>
+    <section id="about">
+      <h2>About</h2>
+      <div class="about divWrap">
+        <div>
+          <img
+            src="https://d35hi420xc5ji7.cloudfront.net/profileImage/819d7020-2665-4f4b-a88a-e1c56573c648"
+          />
+        </div>
+        <div class="introduction">
+          <div class="name">你好，我叫王怡晴</div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="divWrap"></div>
+    </section>
+    <section id="works">
+      <h2>Works</h2>
+      <div class="divWrap"></div>
+    </section>
+    <div class="goTop">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script src="SCRIPT/index.js"></script>
+  </body>
+</html>
