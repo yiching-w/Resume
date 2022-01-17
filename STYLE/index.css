@@ -29,8 +29,8 @@ BODY {
   position: fixed;
   bottom: 30px;
   right: 10px;
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
   background: #4bffa5;
   color: #121315;
@@ -245,6 +245,10 @@ SECTION H2 {
   font-weight: 900;
 }
 
+.introContent {
+  color: #fff;
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
   SECTION {
     width: 50%;
@@ -255,11 +259,24 @@ SECTION H2 {
   SECTION {
     width: 60%;
   }
+  .introduction {
+    width: 60%;
+  }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1199px) {
   SECTION {
     width: 70%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .divWrap {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .introduction {
+    margin: 0 10px;
   }
 }
 
