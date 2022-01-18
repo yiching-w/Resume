@@ -137,6 +137,10 @@ BODY {
   margin-top: 20px;
 }
 
+.btn div {
+  text-align: center;
+}
+
 .btn a {
   display: inline-block;
   margin: 0.4rem;
@@ -236,6 +240,14 @@ SECTION H2 {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 250px;
+}
+
 .about IMG {
   width: 100px;
   height: 100px;
@@ -265,8 +277,8 @@ SECTION H2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 250px;
   padding: 20px 0;
+  width: 250px;
   margin: 5px 0;
   background-color: #fff1;
 }
@@ -284,7 +296,8 @@ SECTION H2 {
   flex-wrap: wrap;
 }
 
-.language .content {
+.language .content,
+.tools .content {
   flex-direction: column;
   flex-wrap: nowrap;
 }
@@ -296,7 +309,8 @@ SECTION H2 {
   margin: 10px 0;
 }
 
-.language .content li {
+.language .content li,
+.tools .content li {
   width: 100%;
 }
 
@@ -322,15 +336,24 @@ SECTION H2 {
 }
 
 @media screen and (min-width: 769px) {
-  .divWrap {
+  #about .about {
     flex-direction: row;
-    align-items: flex-start;
+    max-width: 95%;
+  }
+  #skills .divWrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   .introduction {
     margin: 0 10px;
   }
   .type {
-    margin: 0 5px;
+    width: 100%;
+    margin: 0;
+  }
+  .webDevelopment {
+    grid-column: 1 / 3;
   }
 }
 
