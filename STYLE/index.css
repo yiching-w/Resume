@@ -1,10 +1,15 @@
+:root {
+  --light-green: #4bffa5;
+  --dark: #121315;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 BODY {
-  background: #121315;
+  background: var(--dark);
   font-family: 'Raleway', sans-serif;
 }
 
@@ -22,7 +27,7 @@ BODY {
 ::-webkit-scrollbar-thumb {
   border-radius: 30px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #4bffa5;
+  background-color: var(--light-green);
 }
 
 .goTop {
@@ -32,8 +37,8 @@ BODY {
   width: 38px;
   height: 38px;
   cursor: pointer;
-  background: #4bffa5;
-  color: #121315;
+  background: var(--light-green);
+  color: var(--dark);
   display: none;
   align-items: center;
   justify-content: center;
@@ -46,7 +51,7 @@ BODY {
   right: 0;
   bottom: 0;
   z-index: 101;
-  background-color: #121315;
+  background-color: var(--dark);
 }
 
 .lineLoading {
@@ -125,7 +130,7 @@ BODY {
 
 #featureText {
   font-weight: bold;
-  color: #4bffa5;
+  color: var(--light-green);
 }
 
 .btn {
@@ -136,15 +141,15 @@ BODY {
   display: inline-block;
   margin: 0.4rem;
   padding: 0.5rem 1rem;
-  border: 2px solid #4bffa5;
-  color: #4bffa5;
+  border: 2px solid var(--light-green);
+  color: var(--light-green);
   text-decoration: none;
   transition: 0.3s all ease-in-out;
 }
 
 .btn a:hover {
-  background: #4bffa5;
-  color: #121315;
+  background: var(--light-green);
+  color: var(--dark);
   transform: scale(1.1);
 }
 
@@ -180,7 +185,7 @@ BODY {
 }
 
 .slideDown {
-  color: #4bffa5;
+  color: var(--light-green);
   position: absolute;
   font-size: 28px;
   animation: bounce 1s linear infinite alternate;
@@ -222,7 +227,7 @@ SECTION H2 {
 
 .divWrap {
   z-index: 1;
-  background: #121315;
+  background: var(--dark);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,12 +246,58 @@ SECTION H2 {
 }
 
 .name {
-  color: #4bffa5;
+  color: var(--light-green);
   font-weight: 900;
 }
 
 .introContent {
   color: #fff;
+}
+
+#skills i {
+  color: #4bffaf;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  padding: 20px 0;
+  margin: 5px 0;
+  background-color: #fff1;
+}
+
+.title {
+  color: #fff;
+}
+
+.content {
+  color: #949494;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.language .content {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.content li {
+  text-align: center;
+  width: 40%;
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.language .content li {
+  width: 100%;
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -277,6 +328,9 @@ SECTION H2 {
   }
   .introduction {
     margin: 0 10px;
+  }
+  .type {
+    margin: 0 5px;
   }
 }
 
