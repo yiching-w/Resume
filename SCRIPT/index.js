@@ -4,7 +4,7 @@ $(document).ready(function () {
   function loadingWait() {
     setTimeout(() => {
       $('#preloader').fadeOut()
-      $('BODY').css('overflow', 'auto')
+      $('BODY').css('overflow-y', 'auto')
     }, 1300)
   }
 
@@ -50,6 +50,8 @@ $(document).ready(function () {
     return new Promise((resolve) => setTimeout(resolve, ms))
   }
 
+  const types = document.querySelectorAll('.type')
+
   window.addEventListener('scroll', () => {
     if ($(window).scrollTop() == '0') {
       $('.bgImg').css('transform', 'translate(0px, 0px)')
@@ -64,6 +66,14 @@ $(document).ready(function () {
     } else {
       $('.goTop').css('display', 'flex')
     }
+
+    types.forEach((type) => {
+      if (type.getBoundingClientRect().top < (window.innerHeight / 5) * 4) {
+        type.classList.add('show')
+      } else {
+        type.classList.remove('show')
+      }
+    })
   })
 
   $('a').on('click', function (e) {
