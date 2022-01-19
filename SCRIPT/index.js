@@ -8,6 +8,23 @@ $(document).ready(function () {
     }, 1300)
   }
 
+  const burger = document.querySelector('.burger')
+  const navLinks = document.querySelector('.nav-links')
+  const nav = document.querySelector('.nav')
+  burger.addEventListener('click', function () {
+    this.classList.toggle('active')
+    navLinks.classList.toggle('active')
+  })
+
+  window.addEventListener('scroll', function () {
+    console.log(document.documentElement.scrollTop)
+    if (document.documentElement.scrollTop > 200) {
+      nav.classList.add('active')
+    } else {
+      nav.classList.remove('active')
+    }
+  })
+
   const textList = ['Wang Yi Ching', 'Front-End Developer']
 
   typing(textList, $('#featureText'))
