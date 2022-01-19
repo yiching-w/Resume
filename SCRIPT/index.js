@@ -9,15 +9,13 @@ $(document).ready(function () {
   }
 
   const burger = document.querySelector('.burger')
-  const navLinks = document.querySelector('.nav-links')
+  const navLinks = document.querySelector('ul.nav-links')
   const nav = document.querySelector('.nav')
   burger.addEventListener('click', function () {
-    this.classList.toggle('active')
     navLinks.classList.toggle('active')
   })
 
   window.addEventListener('scroll', function () {
-    console.log(document.documentElement.scrollTop)
     if (document.documentElement.scrollTop > 200) {
       nav.classList.add('active')
     } else {
@@ -103,6 +101,7 @@ $(document).ready(function () {
       e.preventDefault()
       const hash = this.hash
       $('html, body').animate({ scrollTop: $(hash).offset().top }, 800)
+      $('ul.nav-links').removeClass('active')
     }
   })
 

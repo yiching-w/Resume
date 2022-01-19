@@ -251,16 +251,16 @@ ul li a {
   transform-origin: bottom right;
 }
 
-.burger.active .line1 {
+ul.nav-links.active + .burger .line1 {
   transform: rotate(-45deg);
   transform-origin: top right;
 }
 
-.burger.active .line2 {
+ul.nav-links.active + .burger .line2 {
   opacity: 0;
 }
 
-.burger.active .line3 {
+ul.nav-links.active + .burger .line3 {
   transform: rotate(45deg);
   transform-origin: bottom right;
 }
@@ -294,21 +294,21 @@ ul li a {
     z-index: 1;
   }
 
-  ul li {
+  ul.nav-links li {
     margin: 30px 30px;
     transform: translateX(500px);
     transition: transform 0.6s ease-in;
   }
 
-  ul li + li {
+  ul.nav-links li + li {
     transform: translateX(600px);
   }
 
-  ul li + li + li {
+  ul.nav-links li + li + li {
     transform: translateX(700px);
   }
 
-  ul li + li + li + li {
+  ul.nav-links li + li + li + li {
     transform: translateX(800px);
   }
 
