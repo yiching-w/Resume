@@ -4,7 +4,7 @@ $(document).ready(function () {
   function loadingWait() {
     setTimeout(() => {
       $('#preloader').fadeOut()
-      $('BODY').css('overflow-y', 'auto')
+      $('BODY').css('overflow', 'auto')
     }, 1300)
   }
 
@@ -66,7 +66,12 @@ $(document).ready(function () {
     } else {
       $('.goTop').css('display', 'flex')
     }
+    checkTypes()
+  })
 
+  checkTypes()
+
+  function checkTypes() {
     types.forEach((type) => {
       if (type.getBoundingClientRect().top < (window.innerHeight / 5) * 4) {
         type.classList.add('show')
@@ -74,7 +79,7 @@ $(document).ready(function () {
         type.classList.remove('show')
       }
     })
-  })
+  }
 
   $('a').on('click', function (e) {
     if (this.hash != '') {
