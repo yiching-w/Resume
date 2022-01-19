@@ -204,7 +204,7 @@ nav.active {
   color: var(--light-green);
   letter-spacing: 1.5px;
   font-size: 20px;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 ul.nav-links {
@@ -268,7 +268,7 @@ ul.nav-links.active + .burger .line3 {
 @media screen and (max-width: 768px) {
   .burger {
     display: flex;
-    margin-right: 40px;
+    margin-right: 30px;
   }
 
   ul.nav-links {
