@@ -1,10 +1,13 @@
 $(document).ready(function () {
   loadingWait()
 
+  const textList = ['Wang Yi Ching', 'Front-End Developer']
+
   function loadingWait() {
     setTimeout(() => {
       $('#preloader').fadeOut()
       $('BODY').css('overflow', 'auto')
+      typing(textList, $('#featureText'))
     }, 1300)
   }
 
@@ -22,10 +25,6 @@ $(document).ready(function () {
       nav.classList.remove('active')
     }
   })
-
-  const textList = ['Wang Yi Ching', 'Front-End Developer']
-
-  typing(textList, $('#featureText'))
 
   async function typing(textList, eleRef) {
     let i = 0
@@ -108,5 +107,16 @@ $(document).ready(function () {
   $('.goTop').on('click', function (e) {
     e.preventDefault()
     $('html, body').animate({ scrollTop: 0 }, 800)
+  })
+
+  swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   })
 })

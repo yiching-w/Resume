@@ -11,10 +11,11 @@
 	<title>Yi Ching｜Resume</title>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 	<link href="STYLE/index.css" rel="stylesheet" />
 </head>
 
-<body style="overflow: hidden">
+<body id="main-scrollbar" style="overflow: hidden">
 	<div class="preloader" id="preloader">
 		<div class="lineLoading"></div>
 	</div>
@@ -107,12 +108,33 @@
 	</section>
 	<section id="works">
 		<h2>Works</h2>
-		<div class="divWrap"></div>
+		<div class="divWrap">
+			<div class="swiper">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide">Slide 1</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+					...
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+				<!-- If we need scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</div>
 	</section>
 	<div class="goTop">
 		<i class="fas fa-chevron-up"></i>
 	</div>
 	<script crossorigin="anonymous" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<script src="SCRIPT/index.js"></script>
 </body>
 
