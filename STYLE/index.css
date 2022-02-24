@@ -274,6 +274,7 @@ ul.nav-links.active + .burger .line3 {
   ul.nav-links {
     z-index: -1;
     opacity: 0;
+    visibility: hidden;
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -289,6 +290,7 @@ ul.nav-links.active + .burger .line3 {
   }
 
   ul.nav-links.active {
+    visibility: visible;
     transform: translateX(0);
     opacity: 1;
     z-index: 1;
@@ -346,7 +348,7 @@ SECTION H2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 35px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   overflow: hidden;
 }
@@ -356,16 +358,67 @@ SECTION H2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 250px;
 }
 
 .about IMG {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+}
+
+.profileImageWrap {
+  z-index: 1;
+}
+
+.profileImageWrap:hover .profileImage {
+  transform: rotateZ(360deg) scale(1.5) translateX(-15px);
+}
+
+.profileImage {
+  background-image: url('https://yiching-w.github.io/resume/IMAGE/profileImage.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  width: 125px;
+  height: 125px;
+  transition: 0.8s ease;
+}
+
+.profileImage::after {
+  content: '';
+  background-color: #4bffa5;
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+}
+
+.profileImage::before {
+  content: '';
+  background-color: #3b9668;
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
+}
+
+.slogan {
+  font-size: 18px;
+  font-weight: 900;
+  color: #fff;
+  margin: 10px 0;
 }
 
 .introduction {
-  margin-top: 10px;
+  margin-top: 30px;
+}
+
+.introContent p {
+  margin-bottom: 15px;
 }
 
 .name {
@@ -449,9 +502,6 @@ SECTION H2 {
   SECTION {
     width: 60%;
   }
-  .introduction {
-    width: 60%;
-  }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1199px) {
@@ -460,18 +510,24 @@ SECTION H2 {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 900px) {
   #about .about {
     flex-direction: row;
     max-width: 95%;
   }
+  .introduction {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 769px) {
   #skills .divWrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
   .introduction {
-    margin: 0 10px;
+    margin: 0 40px;
   }
   .type {
     width: 100%;
