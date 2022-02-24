@@ -366,7 +366,8 @@ SECTION H2 {
 }
 
 .profileImageWrap {
-  z-index: 1;
+  margin: 0;
+  transition: 0.8s ease;
 }
 
 .profileImageWrap:hover .profileImage {
@@ -520,6 +521,15 @@ SECTION H2 {
   }
 }
 
+@media screen and (max-width: 901px) {
+  .profileImageWrap:hover .profileImage {
+    transform: rotateZ(360deg) scale(1.4);
+  }
+  .profileImageWrap:hover {
+    margin: 20px 0 30px;
+  }
+}
+
 @media screen and (min-width: 769px) {
   #skills .divWrap {
     display: grid;
@@ -550,10 +560,26 @@ SECTION H2 {
   }
 }
 
-/*
- * swiper
-*/
-.swiper {
-  width: 600px;
-  height: 300px;
+.experienceTitle {
+  border: 1px solid #fff;
+  width: fit-content;
+  padding: 10px;
+  font-weight: 100;
+  font-size: 17px;
+  color: #fff;
+}
+
+.edu {
+  color: var(--light-green);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.edu span {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.workExperience {
+  margin-top: 30px;
 }
