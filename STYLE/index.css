@@ -720,6 +720,15 @@ small {
   font-size: 0.9rem;
 }
 
+.workIntro ul li::before {
+  content: '▸';
+  color: #4bffa5;
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
+
 .workIntro button {
   padding: 12px 25px;
 }
