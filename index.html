@@ -74,7 +74,7 @@
             <div class="slogan">全力完成需求，自我成長。</div>
             <div class="introContent">
               <p>
-                從資策會Java班結訓，不僅喜歡後端的邏輯思考，更喜歡前端的直覺性及視覺感受，享受切版、實作動畫、
+                從資策會Java班結訓，不僅喜歡後端的邏輯思考，更喜歡前端的直覺性及視覺感受，享受撰寫程式碼以實現前端畫面、實作動畫、
                 思考使用者的體驗、實作串接後端API、完成專案需求等等相關前端技術，因而成為前端工程師。
               </p>
               <p>
@@ -83,7 +83,7 @@
               </p>
               <p>
                 持續學習前端相關技術，習慣在 udemy
-                學習平台上，自我學習相關技術。
+                學習平台上，自我學習相關技術，並實作應用在專案上。
               </p>
             </div>
           </div>
@@ -144,19 +144,154 @@
         </div>
         <div class="workExperience">
           <div class="experienceTitle">Work Experience</div>
-          <div class="edu"><span>資策會</span> Java雲端服務開發技術養成班</div>
-          <div class="edu"><span>高雄餐旅大學</span> 旅館管理系</div>
-          <div class="edu"><span>國立台南高商</span> 應用外語科</div>
+          <ul class="experience">
+            <li>
+              <div class="title">前端工程師 <span>繆思模麗有限公司</span></div>
+              <small>2020/12 - 2022/02</small>
+              <div class="jobDetail">
+                <p>1. web前端頁面開發，使用RWD可適用各裝置</p>
+                <p>2. 前端頁面渲染，部分 UI 設計</p>
+                <p>3. 參與專案開發之流程討論</p>
+                <p>4. 協助後端工程師開發</p>
+                <p>5. MVC 串接後端 API</p>
+              </div>
+            </li>
+            <li>
+              <div class="title">地勤人員 <span>Singapore Changi Airport</span></div>
+              <small>2018/06 - 2019/12</small>
+              <div class="jobDetail">
+                <p>
+                  接觸來自各地的乘客，大部分使用英文溝通，英文聽說能力大幅進步
+                </p>
+                <p>
+                  解決乘客的疑難雜症，因而培養出溝通、協調能力以及解決能力
+                </p>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
     <section id="works">
       <h2>Works</h2>
-      <div class="divWrap"></div>
+      <div class="divWrap">
+        <div class="work">
+          <div class="workImgWrap">
+            <img src="/IMAGE/young.png" alt="">
+          </div>
+          <div class="workIntro">
+            <div>
+              <div class="workTitle">交友軟體(網頁)</div>
+              <ul>
+                  <li>部分UI設計，適用RWD</li>
+                  <li>webSocket 聊天室</li>
+                  <li>Progressive Web Apps</li>
+                  <li>協助後端功能</li>
+              </ul>
+          </div>
+            <button class="more"  data-id="young">查看</button>
+          </div>
+        </div>
+        <div class="work">
+          <div class="workImgWrap">
+            <img src="/IMAGE/dd.png" alt="">
+          </div>
+          <div class="workIntro">
+            <div>
+              <div class="workTitle">網紅交流平台</div>
+              <ul>
+                  <li>部分UI設計，適用RWD</li>
+                  <li>協助後端功能</li>
+              </ul>
+          </div>
+            <button class="more" data-id="dd">查看</button>
+          </div>
+        </div>
+        <div class="secondWork work"></div>
+      </div>
+      <div class="carousel" id="young">
+        <button id="close"><i class="fas fa-times"></i></button>
+        <div class="image-container" id="imgs">
+          <div class="imgDiv">
+            <img
+              src="/IMAGE/young.png"
+              alt="first-image"
+            />
+          </div>
+          <div class="imgDiv">
+            <img
+              src="/IMAGE/young1.png"
+              alt="second-image"
+            />
+          </div>
+          <div class="imgDiv">
+            <img
+              src="/IMAGE/bg.jpg"
+              alt="third-image"
+            />
+          </div>
+          <div class="imgDiv">
+            <img
+              src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="forth-image"
+            />
+          </div>
+        </div>
+        <div class="buttons-container">
+          <button id="left">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button id="right">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="carousel" id="dd">
+        <button id="close"><i class="fas fa-times"></i></button>
+        <div class="image-container" id="imgs">
+          <div class="imgDiv">
+            <img
+              src="/IMAGE/young.png"
+              alt="first-image"
+            />
+          </div>
+          <div class="imgDiv">
+            <img
+              src="/IMAGE/young1.png"
+              alt="second-image"
+            />
+          </div>
+          <div class="imgDiv">
+            <img
+              src="/IMAGE/bg.jpg"
+              alt="third-image"
+            />
+          </div>
+          <div class="imgDiv">
+            <img
+              src="https://images.unsplash.com/photo-1567225591450-06036b3392a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="forth-image"
+            />
+          </div>
+        </div>
+        <div class="buttons-container">
+          <button id="left">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button id="right">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="notes">
+      <a href="https://github.com/yiching-w"><i class="fab fa-github"></i></a>
     </section>
     <div class="goTop">
       <i class="fas fa-chevron-up"></i>
     </div>
+    <div class="backdrop"></div>
     <script
       crossorigin="anonymous"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="

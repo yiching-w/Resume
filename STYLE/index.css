@@ -188,7 +188,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 9;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -560,6 +560,12 @@ SECTION H2 {
   }
 }
 
+#experience .divWrap {
+  padding: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .experienceTitle {
   border: 1px solid #fff;
   width: fit-content;
@@ -567,6 +573,7 @@ SECTION H2 {
   font-weight: 100;
   font-size: 17px;
   color: #fff;
+  margin-bottom: 10px;
 }
 
 .edu {
@@ -582,4 +589,309 @@ SECTION H2 {
 
 .workExperience {
   margin-top: 30px;
+}
+
+.workExperience ul li {
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.workExperience ul li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #4bffa5;
+  background: #000;
+  border-radius: 50%;
+  left: 0;
+  z-index: 1;
+}
+
+.workExperience ul li::after,
+.workExperience ul li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1.5px;
+  height: 100%;
+  background: #4bffa5;
+  left: 5.5px;
+  top: 0;
+}
+
+.workExperience ul li:hover::before {
+  animation: circle 1.5s infinite;
+  border-width: 3px;
+}
+
+.workExperience ul li:hover::after {
+  width: 2.5px;
+  left: 5px;
+}
+
+.workExperience ul li .title {
+  font-weight: 900;
+}
+
+.workExperience ul li .title span {
+  font-size: 0.7rem;
+  font-weight: 100;
+}
+
+small {
+  color: #4bffa5;
+}
+
+.jobDetail {
+  margin-top: 10px;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+.jobDetail p {
+  margin-bottom: 5px;
+}
+
+@keyframes circle {
+  from {
+    box-shadow: 0 0 0 0px #4bffa5;
+  }
+  to {
+    box-shadow: 0 0 0 10px #4bffa500;
+  }
+}
+
+@media (min-width: 900px) {
+  #experience .divWrap {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .workExperience {
+    margin: 0 0 0 20px;
+  }
+}
+
+#works .divWrap {
+  padding: 30px 20px;
+}
+
+.work {
+  display: flex;
+  margin: 10px 0;
+}
+
+.workImgWrap {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.work:nth-of-type(2) .workImgWrap {
+  order: 2;
+}
+
+.workImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.workIntro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 15px 10px;
+}
+
+.workTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.workIntro ul li {
+  color: #fff;
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+.workIntro button {
+  padding: 12px 25px;
+}
+
+button {
+  background-color: transparent;
+  color: #4bffa5;
+  border: 3px #4bffa5 solid;
+  font-size: 14px;
+  letter-spacing: 2px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+button:active {
+  transform: scale(0.98);
+}
+
+.imgDiv {
+  width: 400px;
+}
+
+.carousel img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.carousel {
+  height: 442px;
+  overflow: hidden;
+  visibility: hidden;
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-200%);
+  z-index: 10;
+  transition: 0.6s ease;
+}
+
+.carousel.show {
+  visibility: visible;
+  transform: translateY(-50%);
+}
+
+#close {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+.image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-container button {
+  width: 49.6%;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.backdrop {
+  background: #000d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  height: 100vh;
+  width: 100%;
+  visibility: hidden;
+  transition: 0.7s ease;
+}
+
+.backdrop.show {
+  visibility: visible;
+}
+
+@media (max-width: 798px) {
+  .work {
+    flex-direction: column;
+  }
+
+  .workIntro {
+    flex-direction: row;
+  }
+
+  .workIntro button {
+    margin-left: auto;
+  }
+  .work:nth-of-type(2) .workIntro {
+    order: 2;
+  }
+  .work:nth-of-type(2) .workImgWrap {
+    order: 1;
+  }
+}
+
+@media (max-width: 798px) {
+  .workIntro button {
+    padding: 5px 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel {
+    width: 380px;
+  }
+  .imgDiv {
+    width: 380px;
+  }
+  .carousel img {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 380px) {
+  .carousel {
+    width: 350px;
+  }
+  .imgDiv {
+    width: 350px;
+  }
+  .carousel img {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 350px) {
+  .carousel {
+    width: 300px;
+  }
+  .imgDiv {
+    width: 300px;
+  }
+  .carousel img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+#notes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#notes i {
+  font-size: 40px;
+  color: #fff;
 }

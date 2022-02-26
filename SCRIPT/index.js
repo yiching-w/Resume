@@ -109,14 +109,63 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: 0 }, 800)
   })
 
-  swiper = new Swiper('.swiper', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  const moreBtns = document.querySelectorAll('.more')
+
+  moreBtns.forEach((more) => {
+    more.addEventListener('click', function () {
+      let id = this.getAttribute('data-id')
+      let carousel = document.getElementById(id)
+      let backdrop = document.querySelector('.backdrop')
+      let imgs = carousel.querySelector('#imgs')
+      let close = carousel.querySelector('#close')
+      let leftBtn = carousel.querySelector('#left')
+      let rightBtn = carousel.querySelector('#right')
+
+      let img = carousel.querySelectorAll('#imgs img')
+
+      let idx = 0
+      let interval = setInterval(run, 5000)
+
+      carousel.classList.add('show')
+      backdrop.classList.add('show')
+
+      close.addEventListener('click', () => {
+        carousel.classList.remove('show')
+        backdrop.classList.remove('show')
+        clearInterval(interval)
+      })
+
+      rightBtn.addEventListener('click', () => {
+        idx++
+        changeImage()
+        resetInterval()
+      })
+
+      leftBtn.addEventListener('click', () => {
+        idx--
+        changeImage()
+        resetInterval()
+      })
+
+      function run() {
+        idx++
+        changeImage()
+      }
+
+      function changeImage() {
+        if (idx > img.length - 1) {
+          idx = 0
+        } else if (idx < 0) {
+          idx = img.length - 1
+        }
+
+        imgs.style.transform = `translateX(${-idx * carousel.offsetWidth}px)`
+      }
+
+      function resetInterval() {
+        clearInterval(interval)
+        interval = setInterval(run, 5000)
+      }
+    })
   })
 })
