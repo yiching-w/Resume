@@ -113,7 +113,6 @@ BODY {
   top: 0;
   width: 100%;
   height: 100%;
-  transform: translate3d(0px, 0px, 0px);
 }
 
 .typingContainer {
@@ -907,6 +906,10 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#notes a {
+  margin: 0 10px;
 }
 
 #notes i {
